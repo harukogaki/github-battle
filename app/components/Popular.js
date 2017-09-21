@@ -1,4 +1,5 @@
 var React = require('react');
+var PropTypes = require('prop-types');
 
 class SelectLanguage extends React.Component{
   render() {
@@ -21,6 +22,10 @@ class SelectLanguage extends React.Component{
   }
 }
 
+SelectLanguage.propTypes = {
+  selectedLanguage = PropTypes.string.isRequired,
+  onSelect = PropTypes.func.isRequired
+}
 
 class Popular extends React.Component{
 
