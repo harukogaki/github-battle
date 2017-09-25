@@ -5,13 +5,13 @@ var axios = require('axios');
 var params = '?per_page=100'
 
 function getProfile(username){
-  return axios.get('http://api.github.com/users/' + username + params).then(function(user){
+  return axios.get('https://api.github.com/users/' + username + params).then(function(user){
     return user.data;
   })
 }
 
 function getRepos(username){
-  return axios.get('http://api.github.com/users/' + username + '/repos' + params )
+  return axios.get('https://api.github.com/users/' + username + '/repos' + params )
 }
 
 function getStartCount(repos){
